@@ -2,8 +2,9 @@ def get_fib(n):
     if(n <= 1):
         return n;
     else:
-        F = list(range(n+1))
-        for i in range(2,n+1):
+        range_end = n+1
+        F = list(range(range_end))
+        for i in range(2,range_end):
             F[i] = F[i-1] + F[i-2]
         return F[n]
 
@@ -11,8 +12,9 @@ def get_fib_last_digit(n):
     if(n <= 1):
         return n;
     else:
-        F = list(range(n+1))
-        for i in range(2,n+1):
+        range_end = n+1
+        F = list(range(range_end))
+        for i in range(2,range_end):
             F[i] = (F[i-1] + F[i-2])%10
         return F[n]
 
