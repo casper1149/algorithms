@@ -61,7 +61,7 @@ try:
     for i in range(0, k):
         result_list.append(binary_search(n-1, A, B[i]))
 
-    for i in range(0, k):
+    for i in range(0, len(result_list)):
         sys.stdout.write(str(result_list[i]) + " ")
 except ValueError:
     print("That's not an int!")
