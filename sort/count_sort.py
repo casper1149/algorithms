@@ -33,19 +33,18 @@ for i in range(0, len(result)):
 '''
 
 ''' Input option 2 with input validation '''
-try:   
+try:
     input_sort_size = input('Please specify number of elements to sort: ')
     sort_size = int(input_sort_size)
-    input_sort_numbers = input('Please specify elements to sort: ')
+    input_sort_numbers = input('Please specify %d elements in between 0 and 10 to sort: ' % sort_size)
     sort_numbers = list(map(int, input_sort_numbers.split()))
-    for i in range(0, len(sort_numbers)):
-        sort_number = int(sort_numbers[i])
-        if(sort_number > 10):
-            raise Exception("Element %d is too big" % (i+1))
-        sort_numbers[i] = sort_number
 
     if(len(sort_numbers) > sort_size):
         raise Exception("Wrong number of elements")
+
+    for i in range(0, len(sort_numbers)):
+        if(sort_numbers[i] > 10):
+            raise Exception("Element %d is too big" % (i+1))
 
     result = count_sort(sort_size, sort_numbers)
 
