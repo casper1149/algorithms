@@ -12,7 +12,13 @@ def insertion_sort_asc(arr):
 
 def insertion_sort_desc(arr):
     ''' Descending insertion sort implementation '''
-    pass
+    for j in range(1, len(arr)):
+        key = arr[j]
+        i = j - 1
+        while i >= 0 and arr[i] < key:
+            arr[i+1] = arr[i]
+            i -= 1
+        arr[i+1] = key
 
 def test_insertion_sort_desc():
     ''' Test of descending insertion sort implementation '''
