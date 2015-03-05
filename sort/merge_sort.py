@@ -17,7 +17,6 @@ def test_merge_sort():
         raise Exception('test_merge_sort, expected: %s, actual: %s' % (str(expected), str(arr)))
 
     sys.stdout.write('test_merge_sort passed\n')
-    pass
 
 def merge_sort(arr, left, right):
     ''' Merge sort implementation main method '''
